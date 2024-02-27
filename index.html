@@ -98,7 +98,9 @@
           </button>
         </div>
         <div class="col-4">
-          <button type="button" class="w-100 btn btn-warning">Clear</button>
+          <button type="button" class="w-100 btn btn-warning" onclick="clearValues()">
+            Clear
+          </button>
         </div>
       </div>
       <div class="row">
@@ -175,6 +177,15 @@
           return `<div>Person ${item.id + 1} : ${item.summary}</div>`;
         })
         .join("");
+    }
+
+    function clearValues() {
+      document.getElementById("person1").value = "";
+      document.getElementById("person2").value = "";
+      document.getElementById("person3").value = "";
+      document.getElementById("person4").value = "";
+      document.getElementById("multiplier").value = "";
+      document.getElementById("value").innerHTML = "";
     }
   </script>
 </html>
